@@ -70,13 +70,15 @@ $(document).ready(function(){
         responsive:[
             {
                 breakpoint: 768,
-                slidesToShow: 6,
+                settings: {
+                    slidesToShow: 6,
+                }
             }
         ]
     });
 
     $('.depoimentos-slider').slick({
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         infinite: false,
         prevArrow: `
@@ -92,7 +94,9 @@ $(document).ready(function(){
         responsive:[
             {
                 breakpoint: 768,
-                slidesToShow: 3,
+                settings: {
+                    slidesToShow: 1,
+                }
             }
         ]
     });
@@ -115,7 +119,9 @@ $(document).ready(function(){
         responsive:[
             {
                 breakpoint: 768,
-                slidesToShow: 3,
+                settings: { 
+                    slidesToShow: 3,
+                }
             }
         ]
     });
@@ -128,6 +134,19 @@ $(document).ready(function(){
         document.querySelector('nav.menu').classList.remove('active')
     })
 
+    const montaBotao = () => {
+        var button = document.createElement("div");
+
+        button.innerHTML = `
+            <a class="button float-fixed" href="/agendamento">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24.974" height="25.264" viewBox="0 0 24.974 25.264"><g data-name="Grupo 51" fill="#fff"><path data-name="Caminho 91" d="M24.103 2.323h-2.614a.871.871 0 1 0 0 1.742h1.742v19.457H1.742V4.065h2.325a.871.871 0 1 0 0-1.742h-3.2a.874.874 0 0 0-.871.871V24.39a.874.874 0 0 0 .871.871h23.236a.874.874 0 0 0 .871-.871V3.19a.874.874 0 0 0-.871-.867"/><path data-name="Caminho 92" d="M13.649 2.323h-2.468a.871.871 0 1 0 0 1.742h2.468a.871.871 0 1 0 0-1.742"/><path data-name="Caminho 93" d="M7.26 18.004H5.223a.874.874 0 0 0-.871.871v1.452a.874.874 0 0 0 .871.871h2.033a.874.874 0 0 0 .871-.871v-1.456a.874.874 0 0 0-.867-.867"/><path data-name="Caminho 94" d="M13.503 18.004h-2.182a.874.874 0 0 0-.871.871v1.452a.874.874 0 0 0 .871.871h2.178a.874.874 0 0 0 .871-.871v-1.456a.874.874 0 0 0-.867-.867"/><path data-name="Caminho 95" d="M8.131 14.08a.874.874 0 0 0-.871-.871H5.223a.874.874 0 0 0-.871.871v1.452a.874.874 0 0 0 .871.871h2.033a.874.874 0 0 0 .871-.871Z"/><path data-name="Caminho 96" d="M14.374 14.08a.874.874 0 0 0-.871-.871h-2.182a.874.874 0 0 0-.871.871v1.452a.874.874 0 0 0 .871.871h2.178a.874.874 0 0 0 .871-.871Z"/><path data-name="Caminho 97" d="M19.602 13.213h-2.033a.874.874 0 0 0-.871.871v1.452a.874.874 0 0 0 .871.871h2.033a.874.874 0 0 0 .871-.871V14.08a.874.874 0 0 0-.871-.867"/><path data-name="Caminho 98" d="M4.356 9.147v1.452a.874.874 0 0 0 .871.871H7.26a.874.874 0 0 0 .871-.871V9.147a.874.874 0 0 0-.871-.871H5.223a.874.874 0 0 0-.867.871"/><path data-name="Caminho 99" d="M14.374 9.147a.874.874 0 0 0-.871-.871h-2.182a.874.874 0 0 0-.871.871v1.452a.874.874 0 0 0 .871.871h2.178a.874.874 0 0 0 .871-.871Z"/><path data-name="Caminho 100" d="M20.473 9.147a.874.874 0 0 0-.871-.871h-2.033a.874.874 0 0 0-.871.871v1.452a.874.874 0 0 0 .871.871h2.033a.874.874 0 0 0 .871-.871Z"/><path data-name="Caminho 101" d="M7.84 5.808a.874.874 0 0 0 .871-.871V.871A.874.874 0 0 0 7.84 0h-.875a.874.874 0 0 0-.871.871v4.066a.874.874 0 0 0 .871.871Z"/><path data-name="Caminho 102" d="M17.859 0h-.875a.874.874 0 0 0-.871.871v4.066a.874.874 0 0 0 .871.871h.871a.874.874 0 0 0 .871-.871V.871A.874.874 0 0 0 17.859 0"/></g></svg>
+                Agende agora
+            </a>
+        `;
+        button.style = `position: fixed; bottom: 2rem; right: 2rem; z-index: 99`
+        document.body.appendChild(button);
+    }
+
     const montaBlog = () => {
         // ALTERAR PARA O BLOG QUE DESEJA INTEGRAR
         // EXEMPLO https://blog.dna360.com.br/AQUI-CONTINUA-O-MESMO
@@ -137,7 +156,6 @@ $(document).ready(function(){
         fetch(apiURL)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             data.forEach(item => {
                 // AQUI É O CONSUMO DA API DE DADOS PARA RECUPERAR A FOTO DO BLOG
                 const mediaAPI = `https://neoimagemradiologia.com.br/blog/wp-json/wp/v2/media/${item.featured_media}`
@@ -166,4 +184,5 @@ $(document).ready(function(){
     }
 
     montaBlog();
+    montaBotao();
 });

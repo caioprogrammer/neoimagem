@@ -30,3 +30,10 @@
 .float-card h2 {
     margin-bottom: 18px;
 }
+
+.float-fixed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
