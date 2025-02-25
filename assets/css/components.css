@@ -1,0 +1,32 @@
+.button {
+    border-radius: 32px;
+    background-color: var(--blue);
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.float-card {
+    background-color: #FCFDFE;
+    padding: 40px 100px;
+    position: relative;
+    margin-bottom: 60px;
+}
+.float-card .float-image {
+    max-width: 450px;
+    position: absolute;
+    top: -20%;
+    right: 0;
+}
+.float-card p {
+    margin-bottom: 8px !important;
+}
+.float-card h2 {
+    margin-bottom: 18px;
+}

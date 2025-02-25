@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --blue: #5F86E3;
+    --neutral: #00000029;
+    --black: #404040;
+    --total-black: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+    text-decoration: none;
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+input, textarea {
+    border: 1px solid #D6D3E0;
+    outline: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    resize: none !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.title b,
+.title strong {
+    color: var(--blue);
+}
+
+
+
+
+/*Question*/
+.question {
+    position: relative;
+    margin: 0;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question-container {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    max-width: 850px;
+}
+
+.answers {
+    width: 100% !important;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.questions:checked~.answers {
+    height: auto;
+    opacity: 1;
+}
+
+/*FAQ Toggle*/
+.plus {
+    z-index: 5;
+    font-size: 2em;
+    line-height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.questions:checked + .question {
+    margin-bottom: 20px;
+}
+
+.questions:checked+.question .plus {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+}
+
+.questions {
+    display: none;
+
+}
