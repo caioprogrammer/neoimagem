@@ -49,7 +49,7 @@ $(document).ready(function(){
     });
 
     $('.estrutura .slider-thumbnails').slick({
-        slidesToShow: 2, 
+        slidesToShow: 6, 
         slidesToScroll: 1,
         infinite: false,
         dots: false,
@@ -71,7 +71,7 @@ $(document).ready(function(){
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 6,
+                    slidesToShow: 2,
                 }
             }
         ]
@@ -102,7 +102,7 @@ $(document).ready(function(){
     });
 
     $('.corpo-clinico .slider-corpo').slick({
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         infinite: false,
         centerMode: false,
@@ -120,7 +120,7 @@ $(document).ready(function(){
             {
                 breakpoint: 768,
                 settings: { 
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                 }
             }
         ]

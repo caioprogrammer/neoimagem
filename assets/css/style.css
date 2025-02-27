@@ -17,11 +17,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 32px;
 }
 .header .menu ul li a {
     font-size: 16px;
     color: var(--white);
+}
+.header .menu ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .header .container-fluid .agendamento a {
@@ -32,7 +36,7 @@
 }
 .home-slider {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .slick-arrow {
     position: absolute;
@@ -60,18 +64,33 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .especialidades p {
     font-size: 16px;
     max-width: 630px;
     text-align: center;
     margin-bottom: 32px;
+    line-height: 1.5;
 }
 .especialidades .grid-especialidades {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+}
+
+.especialidades .grid-especialidades .especialidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.especialidades .grid-especialidades .especialidade b {
+    color: var(--blue);
+    max-width: 160px;
+    text-align: center;
 }
 
 .especialidades .grid-especialidades a {
@@ -93,7 +112,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 32px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .banner-with-image .images {
     max-width: 570px;
@@ -108,12 +127,14 @@
 }
 .banner-with-image .content {
     width: 100%;
+    max-width: 470px;
 }
 .banner-with-image .content h2 {
     text-align: left;
 }
 .banner-with-image .content > p {
     margin-bottom: 24px;
+    /* line-height: 1.5; */
 }
 .banner-with-image .content .list {
     gap: 12px;
@@ -185,7 +206,8 @@
 .depoimentos {
     background: transparent linear-gradient(93deg, #6154E2 0%, #5CE1E6 100%) 0% 0% no-repeat padding-box;
     padding: 50px 0;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
+    display: none;
 }
 .depoimentos .title b {
     color: #ffffff;
@@ -229,10 +251,12 @@
 }
 .certificados {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
+    display: none;
 }
 .certificados p {
     margin-bottom: 24px;
+    line-height: 1.5;
 }
 .certificados .grid-certificados {
     display: grid;
@@ -241,7 +265,7 @@
     justify-self: center;
 }
 .blog {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .blog .container {
     display: flex;
@@ -282,6 +306,7 @@
 }
 .blog #blog-section .blog-post .post-content > p {
     overflow: hidden;
+    line-height: 1.5;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -330,13 +355,17 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    max-height: 110px;
+    max-height: 160px;
     flex-wrap: wrap;
     overflow: hidden;
     column-gap: 72px;
 }
+.footer .top-content .footer-menu ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
 .footer .top-content .footer-menu ul li {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 .footer .top-content .social ul {
     display: flex;
@@ -349,12 +378,13 @@
 }
 .footer .copyright p {
     color: #ffffff;
+    line-height: 1.5;
 }
 
 
 .header-page {
     background-color: #FCFDFE;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     padding: 50px 0;
 }
 .header-page .container {
@@ -369,19 +399,27 @@
 .header-page .title {
     text-align: left;
 }
+.header-page p {
+    line-height: 26px;
+    max-width: 940px;
+}
 main.content {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 main.content p {
     margin-bottom: 16px;
     font-size: 16px;
+    line-height: 1.5;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 26px;
+}
+main.content .sobre-nos-list p {
+    margin-bottom: 32px;
 }
 
 
 .grid-cards {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .grid-cards .cards {
     grid-template-columns: 1fr 1fr;
@@ -401,13 +439,14 @@ main.content p {
 }
 .grid-cards .cards .card p {
     margin-bottom: 8px;
+    line-height: 1.5;
 }
 .grid-cards .cards .card * {
     color: var(--white);
 }
 
 .sobre-nos-list {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .sobre-nos-list div {
     display: flex;
@@ -455,7 +494,10 @@ main.content p {
 }
 
 .sobre-nos-slider {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
+}
+.sobre-nos-slider .title {
+    margin-bottom: 36px;
 }
 .sobre-nos-slider .slider .slide {
     display: flex;
@@ -493,7 +535,7 @@ main.content p {
 }
 
 .corpo-clinico {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .corpo-clinico h2.title {
     text-align: left;
@@ -513,7 +555,7 @@ main.content p {
     align-items: center;
     justify-content: space-between;
     gap: 32px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .responsabilidade .image,
 .responsabilidade .conteudo {
@@ -529,14 +571,14 @@ main.content p {
 
 
 .unidades {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .infos {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .infos .info {
@@ -549,7 +591,7 @@ main.content p {
 }
 
 .estrutura {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .estrutura .slider-content {
     margin-bottom: 1rem;
@@ -578,7 +620,7 @@ main.content p {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 .form-with-content form {
     max-width: 550px;
@@ -588,15 +630,33 @@ main.content p {
     align-items: flex-start;
     gap: 12px;
 }
+.form-with-content form > div,
 .form-with-content form input,
 .form-with-content form textarea {
     width: 100%;
+    position: relative;
 }
+
+.form-with-content form > div svg {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-10%, -50%);
+    background: white;
+    width: 100%;
+    height: 100%;
+    max-height: 24px;
+    max-width: 50px;
+}
+
 .form-with-content form button {
     margin: 0 auto;
 }
 .form-with-content form textarea {
     min-width: 100%;
+    min-height: 200px;
 }
 .form-with-content .conteudo {
     width: 100%;
