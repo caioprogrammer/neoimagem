@@ -99,6 +99,7 @@ img {
 .questions:checked~.answers {
     height: auto;
     opacity: 1;
+    line-height: 26px;
 }
 
 /*FAQ Toggle*/
